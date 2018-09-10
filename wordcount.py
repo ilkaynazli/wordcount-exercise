@@ -24,8 +24,11 @@ for word in words:
 
 count_words = Counter(better_words)
 
-for word in sorted(count_words):
-     print (f'{word} {count_words[word]}')
+# for word in sorted(count_words):
+#      print (f'{word} {count_words[word]}')      #sorting alphabetically
+
+for word in sorted(count_words, key=lambda word: count_words[word]):
+    print (f'{word} {count_words[word]}')         #sorting by value (integers -ascending order)
 
 
 my_file.close()
