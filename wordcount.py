@@ -1,5 +1,7 @@
 # put your code here.
-my_file = open('test.txt')
+import sys
+
+my_file = open(sys.argv[1])
 count_words = {}
 for line in my_file:
     words= line.split()
