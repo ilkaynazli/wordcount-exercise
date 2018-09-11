@@ -31,9 +31,9 @@ count_words = Counter(better_words)
 # for word in sorted(count_words, key=lambda word: count_words[word]):
 #     print (f'{word} {count_words[word]}')         #sorting by value (integers -ascending order)
 
-new_count_words = sorted(count_words, key=lambda word: count_words[word], reverse=True)
 
-for word in sorted(new_count_words, key = attrgetter('word')):
+for word in sorted(count_words, key=lambda word: count_words[word], reverse=True):
+    
     print (f'{word} {count_words[word]}')         #sorting by value (integers -descending order)
 
 my_file.close()
